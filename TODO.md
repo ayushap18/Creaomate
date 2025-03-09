@@ -2,3 +2,4 @@
 - [ ] Task 575: optimize function 15
 - [ ] Task 408: optimize function 22
 - [ ] Task 744: optimize function 5
+- [ ] Task 707: optimize function 36
