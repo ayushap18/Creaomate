@@ -7,3 +7,4 @@ Session 727: tested feature 27, result OK
 Session 309: tested feature 11, result OK
 Session 746: tested feature 18, result OK
 Session 711: tested feature 14, result OK
+Session 701: tested feature 24, result OK
