@@ -8,3 +8,4 @@
 - Update 6231: improved module 9
 - Update 16053: improved module 18
 - Update 28694: improved module 47
+- Update 31592: improved module 31
