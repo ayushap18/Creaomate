@@ -7,3 +7,4 @@
 - [ ] Task 475: optimize function 8
 - [ ] Task 565: optimize function 22
 - [ ] Task 675: optimize function 7
+- [ ] Task 391: optimize function 25
