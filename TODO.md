@@ -10,3 +10,4 @@
 - [ ] Task 391: optimize function 25
 - [ ] Task 828: optimize function 37
 - [ ] Task 397: optimize function 3
+- [ ] Task 160: optimize function 1
