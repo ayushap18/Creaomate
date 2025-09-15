@@ -14,3 +14,4 @@
 - [ ] Task 552: optimize function 20
 - [ ] Task 600: optimize function 5
 - [ ] Task 613: optimize function 47
+- [ ] Task 468: optimize function 18
