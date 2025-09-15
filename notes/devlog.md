@@ -13,3 +13,4 @@ Session 748: tested feature 11, result OK
 Session 567: tested feature 3, result OK
 Session 980: tested feature 2, result OK
 Session 235: tested feature 26, result OK
+Session 277: tested feature 24, result OK
