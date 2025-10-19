@@ -16,3 +16,4 @@
 - [ ] Task 613: optimize function 47
 - [ ] Task 468: optimize function 18
 - [ ] Task 844: optimize function 47
+- [ ] Task 751: optimize function 27
