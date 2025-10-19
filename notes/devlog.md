@@ -17,3 +17,4 @@ Session 277: tested feature 24, result OK
 Session 108: tested feature 11, result OK
 Session 648: tested feature 1, result OK
 Session 807: tested feature 24, result OK
+Session 911: tested feature 9, result OK
