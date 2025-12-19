@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useContext } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Text, Float, Stars, OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import { useLocalization } from '../hooks/useLocalization';
+import { AppContext } from '../contexts/AppContext';
 import * as THREE from 'three';
 
 const FloatingShape = ({ position, color, speed }: { position: [number, number, number], color: string, speed: number }) => {
@@ -43,7 +43,7 @@ const Scene = () => {
 };
 
 const LandingPage3D: React.FC = () => {
-  const navigate = useNavigate();
+  const { setAuthPage } = useContext(AppContext)!;
   const { t } = useLocalization();
 
   return (
@@ -75,7 +75,7 @@ const LandingPage3D: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/login')}
+              onClick={() => setAuthPage('login')}
               className="px-8 py-3 bg-teal-600 hover:bg-teal-700 rounded-full font-semibold text-lg transition-colors shadow-lg shadow-teal-500/30"
             >
               {t('landing.getStarted') || "Get Started"}
@@ -83,7 +83,7 @@ const LandingPage3D: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/marketplace')}
+              onClick={() => setAuthPage('login')}
               className="px-8 py-3 bg-transparent border-2 border-white/20 hover:bg-white/10 rounded-full font-semibold text-lg transition-colors backdrop-blur-sm"
             >
               {t('landing.exploreMarketplace') || "Explore Market"}
