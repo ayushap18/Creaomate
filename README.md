@@ -151,16 +151,16 @@ Below are screenshots from the live application, showcasing key features and use
 
 <div align="center">
 
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/aa_landingPage.jpg" alt="Landing Page" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/Artisan_Dashboard.jpg" alt="Artisan Dashboard" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/Artisan_Video_generation.jpg" alt="Artisan Video Generation" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/Photo_Studio.jpg" alt="Photo Studio" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/Customer_Dashboard.jpg" alt="Customer Dashboard" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/MarketPlace.jpg" alt="Marketplace" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/ProductDescription.jpg" alt="Product Description" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/Training_section.jpg" alt="Training Section" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/Volunteer_Dashboard.jpg" alt="Volunteer Dashboard" width="330" style="margin:8px;" />
-<img src="https://github.com/Hassan010103/ArtisanAlly-Upgraded/raw/main/images/Volunteer_Hub.jpg" alt="Volunteer Hub" width="330" style="margin:8px;" />
+<img src="images/aa_landingPage.jpg" alt="Landing Page" width="330" style="margin:8px;" />
+<img src="images/Artisan_Dashboard.jpg" alt="Artisan Dashboard" width="330" style="margin:8px;" />
+<img src="images/Artisan_Video_generation.jpg" alt="Artisan Video Generation" width="330" style="margin:8px;" />
+<img src="images/Photo_Studio.jpg" alt="Photo Studio" width="330" style="margin:8px;" />
+<img src="images/Customer_Dashboard.jpg" alt="Customer Dashboard" width="330" style="margin:8px;" />
+<img src="images/MarketPlace.jpg" alt="Marketplace" width="330" style="margin:8px;" />
+<img src="images/ProductDescription.jpg" alt="Product Description" width="330" style="margin:8px;" />
+<img src="images/Training_section.jpg" alt="Training Section" width="330" style="margin:8px;" />
+<img src="images/Volunteer_Dashboard.jpg" alt="Volunteer Dashboard" width="330" style="margin:8px;" />
+<img src="images/Volunteer_Hub.jpg" alt="Volunteer Hub" width="330" style="margin:8px;" />
 
 </div>
 
