@@ -1,0 +1,7 @@
+{
+  "name": "ArtisanX",
+  "description": "An all-in-one AI-powered platform to empower local artisans by enhancing their digital presence, providing financial tools, connecting them with volunteers, and protecting their craft's intellectual property.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
