@@ -18,7 +18,7 @@ import VolunteerProfilePage from './pages/VolunteerProfilePage';
 import CustomerProductDetailPage from './pages/customer/CustomerProductDetailPage';
 import type { Page, Artisan, Volunteer } from './types';
 import { AppProvider, AppContext } from './contexts/AppContext';
-import LandingPage from './pages/LandingPage3D';
+import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 
