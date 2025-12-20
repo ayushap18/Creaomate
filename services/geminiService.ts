@@ -1,10 +1,22 @@
 import { GoogleGenAI, Type, GenerateContentResponse, Modality, Part, Operation, GenerateVideosResponse } from "@google/genai";
 
+// Resolve Gemini API key from multiple env sources to avoid config issues
+const getGeminiApiKey = (): string => {
+    const key = (process.env.API_KEY
+        || (import.meta as any)?.env?.VITE_GEMINI_API_KEY
+        || (import.meta as any)?.env?.GEMINI_API_KEY
+    );
+    if (!key || String(key).trim().length === 0) {
+        throw new Error("API key not found. Please set API_KEY in .env or VITE_GEMINI_API_KEY.");
+    }
+    return String(key).trim();
+};
+
 export const generateText = async (prompt: string): Promise<string> => {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY!.trim() });
+    const ai = new GoogleGenAI({ apiKey: getGeminiApiKey() });
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             contents: prompt,
         });
         return response.text;
@@ -38,7 +50,7 @@ export const generateProductDetailsFromInput = async (
     mimeType?: string,
     textInput?: string
 ): Promise<string> => {
-     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY!.trim() });
+    const ai = new GoogleGenAI({ apiKey: getGeminiApiKey() });
      const prompts = {
         en: `You are an intelligent assistant for an artisan. Analyze the provided image and/or text description of a handcrafted product.
         Based SOLELY on the provided inputs, generate the following content:
@@ -76,7 +88,7 @@ export const generateProductDetailsFromInput = async (
 
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             contents: { parts },
             config: {
                 responseMimeType: "application/json",
@@ -141,7 +153,7 @@ export const transcribeAudio = async (
 
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             contents: {
                 parts: [
                     { inlineData: { data: base64AudioData, mimeType: mimeType } },
@@ -235,7 +247,7 @@ export const transcribeAndGenerateFromAudio = async (
 
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             contents: { parts },
             config: {
                 responseMimeType: "application/json",
@@ -298,7 +310,7 @@ export const generatePricingSuggestion = async (productInfo: string, lang: 'en' 
 
      try {
         const response = await ai.models.generateContent({
-           model: "gemini-2.5-flash",
+           model: "gemini-1.5-flash",
            contents: prompt,
            config: {
              tools: [{googleSearch: {}}],
@@ -332,7 +344,7 @@ export const generateSocialMediaPost = async (platform: string, prompt: string, 
 
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             contents: finalPrompt,
             config: {
                 responseMimeType: "application/json",
@@ -459,10 +471,10 @@ export const editImageWithAI = async (
     mimeType: string,
     prompt: string
 ): Promise<Part[]> => {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY!.trim() });
+    const ai = new GoogleGenAI({ apiKey: getGeminiApiKey() });
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash-image',
+            model: 'gemini-1.5-flash',
             contents: {
                 parts: [
                     { inlineData: { data: base64ImageData, mimeType: mimeType } },
@@ -491,11 +503,7 @@ export const editImageWithAI = async (
 };
 
 export const generateVideoFromStory = async (story: string, lang: 'en' | 'hi' | 'bn' | 'ta' | 'mr'): Promise<Operation<GenerateVideosResponse>> => {
-    const apiKey = process.env.API_KEY?.trim();
-    if (!apiKey) {
-        console.error("API_KEY environment variable not set for video generation.");
-        throw new Error("API_KEY_ERROR");
-    }
+    const apiKey = getGeminiApiKey();
     const ai = new GoogleGenAI({ apiKey });
     const prompts = {
         en: `Generate a short, visually engaging promotional video based on this story: "${story}"`,
@@ -527,11 +535,7 @@ export const generateVideoFromStory = async (story: string, lang: 'en' | 'hi' | 
 };
 
 export const getVideoGenerationStatus = async (operation: Operation<GenerateVideosResponse>): Promise<Operation<GenerateVideosResponse>> => {
-    const apiKey = process.env.API_KEY?.trim();
-    if (!apiKey) {
-        console.error("API_KEY environment variable not set for polling video status.");
-        throw new Error("API_KEY_ERROR");
-    }
+    const apiKey = getGeminiApiKey();
     const ai = new GoogleGenAI({ apiKey });
     try {
         const updatedOperation = await ai.operations.getVideosOperation({ operation: operation });
@@ -547,11 +551,7 @@ export const getVideoGenerationStatus = async (operation: Operation<GenerateVide
 };
 
 export const downloadVideo = async (downloadLink: string): Promise<string> => {
-    const apiKey = process.env.API_KEY?.trim();
-    if (!apiKey) {
-        console.error("API_KEY environment variable not set for downloading video.");
-        throw new Error("API_KEY_ERROR");
-    }
+    const apiKey = getGeminiApiKey();
 
     // Robustly append the API key, handling cases where the URL may or may not have existing query parameters.
     const separator = downloadLink.includes('?') ? '&' : '?';
