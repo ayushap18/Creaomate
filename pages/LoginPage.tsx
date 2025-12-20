@@ -59,7 +59,7 @@ After adding the domain, wait a minute, then refresh this app.`;
         if (err.code === 'auth/unauthorized-domain') {
             setError(getUnauthorizedDomainError());
         } else {
-            setError('Failed to log in with Google. Check the console for details.');
+            setError(`Failed to log in with Google: ${err.message}`);
         }
         console.error(err);
     } finally {
