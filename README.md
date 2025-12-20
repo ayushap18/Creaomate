@@ -33,8 +33,6 @@
 <p align="center">
   <a href="#-the-vision">The Vision</a> •
   <a href="#-key-features">Key Features</a> •
-  <a href="#-technology-stack--architecture">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
   <a href="#-future-roadmap">Future Roadmap</a> •
   <a href="#-app-gallery">App Gallery</a>
 </p>
