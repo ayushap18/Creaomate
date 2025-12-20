@@ -146,7 +146,7 @@ We are just getting started! Our roadmap includes integrating more advanced tech
 
 ## 🖼️ App Gallery
 
-Below are screenshots from the live application, showcasing key features and user interfaces. For a full experience, visit the [deployed website](https://handi-hub-fqvy.vercel.app/).
+Below are screenshots from the live application, showcasing key features and user interfaces. For a full experience, visit the [deployed website](artisan-x.vercel.app).
 
 <div align="center">
 
