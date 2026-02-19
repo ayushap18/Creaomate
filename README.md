@@ -2,6 +2,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=45&duration=3000&pause=1000&color=0D9488&center=true&vCenter=true&width=600&lines=ArtisanX;Empowering+Artisans;AI-Powered+Innovation;Preserving+Heritage" alt="Typing SVG" />
 </div>
 
+
 <p align="center">
   <strong>An all-in-one platform to empower local artisans by enhancing their digital presence, providing financial tools, connecting them with volunteers, and protecting their craft's intellectual property.</strong>
 </p>
